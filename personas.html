@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Personas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li><a href="asistencia.html">Asistencia</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="javascript:cerrarSesion();">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Administración de Personas</h2>
+            <button id="agregar-persona" class="btn btn-primary">Añadir Persona</button>
+            <div id="persona-form" style="display: none;">
+                <h3>Formulario de Persona</h3>
+                <form id="persona-form-element">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="button" id="cancelar-form" class="btn btn-secondary">Cancelar</button>
+                </form>
+            </div>
+            
+            <h3>Lista de Personas</h3>
+            <table id="personas-list" class="table table-striped">
+                <!-- Lista de personas generada dinámicamente -->
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Iglesia</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/personas.js"></script>
+</body>
+</html>
